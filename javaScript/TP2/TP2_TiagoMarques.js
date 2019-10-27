@@ -41,7 +41,7 @@ var alunosReprovados= 0
 
 alunos.forEach(function(aluno){        
     console.log("Aluno nr: " + aluno.matricula + " Nota : " + aluno.nota)
-    
+
     if(aluno.nota <= 50){
         alunosReprovados++
     }else {
@@ -49,7 +49,7 @@ alunos.forEach(function(aluno){
     }
 })
 
-console.log("APROVADOS: " + alunosAprovados*100/20 + "%" + " REPROVADOS: " + alunosReprovados*100/20 + "%")
+console.log("APROVADOS: " + alunosAprovados*100/20 + "%" + " REPROVADOS: " + alunosReprovados*100/20 + "% \n")
 
 function gerarAlunos(){
     var novosAlunos = [];
@@ -78,6 +78,41 @@ function getRandom(max) {
 // ********************** ALGORITIMO 4 *******************************
 console.log("***** Iniciando Algoritimo 04 *****")
 
+let max = 5000
+let min = 0
+let tamanhoArray = 1000
+var array = []
+
+for (var i=0; i<tamanhoArray; i++){
+    sucess = false
+    while(!sucess){
+        var n = geraRandom(max, min);
+        if(array.indexOf(n) < 0){
+            array.push(n)
+            sucess = true
+        }
+    }
+}
+
+function ordenarArray(arr){
+    let array = new Array();
+    array = arr;
+    var arrayOrdenado = array.sort(compararNumeros); 
+
+    return arrayOrdenado;
+}
+
+function geraRandom(max, min){
+    number = Math.floor(Math.random() * (max + 1) + min);
+    return number;
+}
+
+function compararNumeros(a, b) {
+    return a - b;
+}
+
+var arrayOrdenado = ordenarArray(array)
+console.log(arrayOrdenado)
 
 // ********************** ALGORITIMO 5 *******************************
 console.log("***** Iniciando Algoritimo 05 *****")
