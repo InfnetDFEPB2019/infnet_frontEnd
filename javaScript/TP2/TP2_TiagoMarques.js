@@ -143,3 +143,7 @@ console.log("Medidas das laterais: 45, 45, 90 -> " + resultado + "\n")
 
 calcular(25,35,45)
 console.log("Medidas das laterais: 25, 35, 45-> " + resultado + "\n")
+
+
+
+console.log("https://github.com/tdsmarques/infnet_frontEnd")
