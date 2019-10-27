@@ -33,7 +33,47 @@ console.log(num + "! = " + explicaFator + " = " + fatorial + " Tempo: " + tempo 
 
 // ********************** ALGORITIMO 3 *******************************
 console.log("***** Iniciando Algoritimo 03 *****")
+var alunos = [];
+alunos = gerarAlunos();
 
+var alunosAprovados = 0
+var alunosReprovados= 0
+
+alunos.forEach(function(aluno){        
+    console.log("Aluno nr: " + aluno.matricula + " Nota : " + aluno.nota)
+    
+    if(aluno.nota <= 50){
+        alunosReprovados++
+    }else {
+        alunosAprovados++
+    }
+})
+
+console.log("APROVADOS: " + alunosAprovados*100/20 + "%" + " REPROVADOS: " + alunosReprovados*100/20 + "%")
+
+function gerarAlunos(){
+    var novosAlunos = [];
+    class Aluno {
+        constructor(matricula, nota) {
+          this.matricula = matricula;
+          this.nota = nota;
+        }
+      }
+
+    var x = 1;
+
+    while(x < 21){
+        let aluno = new Aluno(x, getRandom(100));
+        novosAlunos.push(aluno);
+        x++;
+    }
+
+    return novosAlunos;
+}
+
+function getRandom(max) {
+    return Math.floor(Math.random() * max + 1)
+}
 
 // ********************** ALGORITIMO 4 *******************************
 console.log("***** Iniciando Algoritimo 04 *****")
