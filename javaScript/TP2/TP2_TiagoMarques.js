@@ -116,3 +116,30 @@ console.log(arrayOrdenado)
 
 // ********************** ALGORITIMO 5 *******************************
 console.log("***** Iniciando Algoritimo 05 *****")
+var resultado = ""
+
+function calcular(a, b, c){
+    
+    if (a<b+c && b<a+c && c<a+b) {
+        if (a==b && b==c) {
+            resultado = 'TRIANGULO EQUILÁTERO';
+        } else {
+            if (a==b || a==c || c==b) {
+                resultado = 'TRIANGULO ISÓSCELES';
+            } else {
+                resultado = 'TRIANGULO ESCALENO';
+            }
+        }
+    } else {
+        resultado = 'NÃO É UM TRIANGULO.';
+    }
+}
+
+calcular(5,5,5)
+console.log("Medidas das laterais: 5, 5, 5 -> " + resultado + "\n")
+
+calcular(45,45,90)
+console.log("Medidas das laterais: 45, 45, 90 -> " + resultado + "\n")
+
+calcular(25,35,45)
+console.log("Medidas das laterais: 25, 35, 45-> " + resultado + "\n")
