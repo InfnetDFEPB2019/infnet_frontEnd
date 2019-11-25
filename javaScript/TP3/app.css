@@ -1,0 +1,26 @@
+#titulo {
+    text-decoration: bold;
+    color: brown;
+    font-size: 20px;
+}
+
+div {
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+    margin: 5px;
+}
+
+#labelEmail, #labelSenha, #label {
+    margin: 10px;
+}
+
+#btnLogin, #btnLogout, #btnCadastro, #btn {
+    margin: 6px;
+}
+
+#login {
+    text-decoration: bold;
+    color: brown;
+    font-size: 14px;
+}
