@@ -103,7 +103,7 @@ function ordenarArray(arr){
 }
 
 function geraRandom(max, min){
-    number = Math.floor(Math.random() * (max + 1) + min);
+    number = Math.floor(Math.random() * (max - min + 1) + min);
     return number;
 }
 
